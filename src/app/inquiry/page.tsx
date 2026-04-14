@@ -2,11 +2,11 @@
 
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
   CheckCircle,
-  Plane,
   ChevronDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -348,12 +348,14 @@ export default function InquiryPage() {
     >
       {/* Header */}
       <header className="flex items-center justify-between px-6 lg:px-10 h-16 shrink-0">
-        <a href="/" className="flex items-center gap-1">
-          <Plane className="h-5 w-5 text-gold" />
-          <span className="font-heading text-xl font-bold text-gold">XO</span>
-          <span className="text-xs font-light tracking-[0.2em] text-foreground/50 uppercase">
-            Vacations
-          </span>
+        <a href="/" className="block">
+          <Image
+            src="/logo.png"
+            alt="XO Vacations"
+            width={120}
+            height={36}
+            className="h-9 w-auto"
+          />
         </a>
         <span className="text-xs text-foreground/40 tracking-wide">
           {step + 1} of {totalSteps}

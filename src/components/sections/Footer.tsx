@@ -1,4 +1,5 @@
-import { ArrowRight, Phone, Mail, MapPin, Plane } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -47,14 +48,14 @@ export function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
             <div>
-              <div className="flex items-center gap-1 mb-4">
-                <Plane className="h-5 w-5 text-gold" />
-                <span className="font-heading text-xl font-bold text-gold">
-                  XO
-                </span>
-                <span className="text-xs font-light tracking-[0.2em] text-foreground/50 uppercase">
-                  Vacations
-                </span>
+              <div className="mb-4">
+                <Image
+                  src="/logo.png"
+                  alt="XO Vacations"
+                  width={300}
+                  height={120}
+                  className="h-[120px] w-auto"
+                />
               </div>
               <p className="text-sm text-foreground/40 leading-relaxed">
                 Designing deeply personal luxury travel experiences for life&apos;s

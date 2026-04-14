@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -30,19 +31,18 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 lg:px-8 h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-1 group">
-          <span className={cn(
-            "font-heading text-2xl font-bold tracking-wide transition-colors duration-500",
-            scrolled ? "text-gold" : "text-white"
-          )}>
-            XO
-          </span>
-          <span className={cn(
-            "text-sm font-light tracking-[0.2em] uppercase transition-colors duration-500",
-            scrolled ? "text-foreground/70" : "text-white/80"
-          )}>
-            Vacations
-          </span>
+        <a href="/" className="block">
+          <Image
+            src="/logo.png"
+            alt="XO Vacations"
+            width={200}
+            height={56}
+            className={cn(
+              "h-14 w-auto transition-all duration-500",
+              scrolled ? "" : "brightness-0 invert"
+            )}
+            priority
+          />
         </a>
 
         {/* Desktop Nav */}
